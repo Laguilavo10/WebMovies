@@ -1,11 +1,21 @@
-// import { useState } from 'react'
-// import './App.css'
+import React from 'react'
+import {HashRouter, Routes, Route} from 'react-router-dom'
+import { Header } from './components/Header'
+import { Home } from './views/Home'
 
-function App() {
 
+export default function App() {
   return (
-    <h1>Hola mundo</h1>
+    <>
+      <HashRouter>
+        <Header/>
+        <Routes>
+          <Route path='/' element={<Home/>}></Route>
+          <Route path='*' element={<h1>Not Found</h1>}></Route>
+        </Routes> 
+
+
+      </HashRouter>
+    </>
   )
 }
-
-export default App

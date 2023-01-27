@@ -1,0 +1,40 @@
+.header{
+  height: 60px;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 30px;
+}
+
+a, a:visited{
+  text-decoration: none;
+  color: var(--text-grey-color);
+}
+.header > h3{
+  font-size: 1.8rem;
+}
+
+.links-container{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--text-grey-color);
+}
+
+.search-container > input{
+  margin-left: 30px;
+  padding: 8px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--input-color);
+  color: white;
+}
+
+.search-container > input::placeholder{
+  color: var(--text-grey-color);
+}
+
+.search-container > img{
+  width: 40px;
+}

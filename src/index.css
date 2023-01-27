@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 1px solid tomato;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+:root{
+  --background-color:#04001f;
+  --input-color:##6c2cfc;
+  --text-grey-color:#9aa2ad
+}
+
+body{
+  background-color: var(--background-color);
+  margin-bottom: 40px;
+}
+
+.home{
+  margin: 0 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container-imgs{
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.container-imgs > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+}

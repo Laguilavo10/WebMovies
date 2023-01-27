@@ -1,0 +1,10 @@
+.trends-container{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.trends-img{
+  width: 100%;
+  height:400px;
+}
