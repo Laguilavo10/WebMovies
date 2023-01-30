@@ -5,7 +5,7 @@ export const BASE_URL_IMG = 'https://image.tmdb.org/t/p/w300'
 export const API_ENDPOINTS = {
   trending:`${BASE_URL}/trending/movie/day${API_KEY}`,
   genres: `${BASE_URL}/genre/movie/list${API_KEY}&language=en-US`,
-  filterByGenres:`${BASE_URL}/discover/movie${API_KEY}&language=en-US&region=CO&with_genres=`
+  filterByGenres:`${BASE_URL}/discover/movie${API_KEY}`
 }
 
 // https://api.themoviedb.org/3/discover/movie?api_key=28b214b65e7b229f965d281328f405d2&with_genres=28&language=es-CO&region=CO

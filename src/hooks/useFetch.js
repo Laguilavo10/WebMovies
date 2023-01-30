@@ -5,7 +5,7 @@ export const useFetch = ({endpoint, queryParameters = ''})=>{
   
   const [state, setState] = useState([])
   const [loading, setLoading] = useState(true)
-  
+
   useEffect(() => {
     fetch(`${API_ENDPOINTS[endpoint]}${queryParameters}`)
       .then((res) => res.json())
@@ -13,6 +13,6 @@ export const useFetch = ({endpoint, queryParameters = ''})=>{
         setState(data)
         setLoading(false)
       })
-  }, [])
+  }, [queryParameters])
   return ({state, loading, setState, setLoading})
 }

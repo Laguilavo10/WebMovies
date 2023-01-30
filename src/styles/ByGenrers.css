@@ -1,0 +1,29 @@
+.byGenrers > h1{
+  text-align: center;
+  margin: 20px;
+  font-size: 3rem;
+}
+
+.byGenrers-list{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.byGenrers-changePage--container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+  gap: 20px;
+}
+.arrow{
+  width: 30px;
+  cursor: pointer;
+}
+
+.left-arrow{
+  width: 30px;
+  transform: rotate(180deg);
+}
