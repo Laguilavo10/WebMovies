@@ -1,10 +1,13 @@
 import React from "react"
 import { useLocation } from "react-router-dom"
 import star from "../assets/star.svg"
+import { useFetch } from "../hooks/useFetch"
 import "../styles/Movie.css"
 
 export function Movie() {
-  let { state } = useLocation()
+  // let { state } = useLocation()
+
+  let { state, loading } = useFetch()
 
   return (
     <>

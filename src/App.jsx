@@ -4,6 +4,7 @@ import { Header } from './components/Header'
 import { ByGenrers } from './views/ByGenrers'
 import { Home } from './views/Home'
 import { Movie } from './views/Movie'
+import { Search } from './views/Search'
 
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
           <Route path='/' element={<Home/>}></Route>
           <Route path='/movie' element={<Movie/>}></Route>
           <Route path='/genres/:movieID' element={<ByGenrers/>}></Route>
+          <Route path='/search' element={<Search/>}></Route>
           <Route path='*' element={<h1>Not Found</h1>}></Route>
         </Routes> 
       </HashRouter>
