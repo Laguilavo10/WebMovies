@@ -1,0 +1,14 @@
+.genders-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.genders-list{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* .genders-list >  */

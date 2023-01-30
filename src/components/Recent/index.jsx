@@ -1,38 +1,28 @@
-import {useEffect, useState} from "react"
+import { useEffect, useState } from "react"
 import "../../styles/Recent.css"
-import {API_ENDPOINTS} from "../../utils/API";
-
+import { BASE_URL_IMG } from "../../utils/API"
+import { useFetch } from "../../hooks/useFetch.js"
+import { NavLink, useNavigate } from "react-router-dom"
+import { MoviePoster } from "../MoviePoster"
+// import { redirectMovie } from "../../utils/redirectMovie";
 
 export function Recent() {
-  let uwu = [1, 2, 3, 4, 5]
 
+  let { loading, state } = useFetch({ endpoint: "trending" })
 
-  const [loading, setLoading] = useState(true);
-  const [trending, setTrending] = useState(null);
+  if (loading) {
+    return null
+  }
 
-  useEffect(() => {
-    fetch(API_ENDPOINTS.genre)
-      .then((res)=>res.json())
-      .then((data)=>console.log(data))
-  }, []);
-  
-  
-  
-  
+  let movies = [...state.results].splice(0, 5)
+
   return (
     <>
       <section className="recent-container">
         <h2>Nuevos Lanzamientos</h2>
         <div className="recent-poster--container">
-          {uwu.map((poster, id) => (
-            <div className="recent-poster" key={id}>
-              <img
-                src="https://img.wattpad.com/cover/226102453-352-k45923.jpg"
-                alt={poster}
-              />
-              <div className="shadow-poster"></div>
-              <p>Pelicula</p>
-            </div>
+          {movies.map((movie, id) => (
+            <MoviePoster title={movie.title} dataMovie={movie} key={movie.id} />
           ))}
         </div>
       </section>

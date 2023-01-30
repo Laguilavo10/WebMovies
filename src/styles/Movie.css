@@ -1,0 +1,38 @@
+.movie-container{
+  display: flex;
+  margin: 45px 10%;
+  gap: 30px;
+  /* justify-content: center; */
+  align-items: center;
+}
+.movie-info{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.movie-info > h2{
+  font-size: 3rem;
+}
+
+.movie-stars{
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.movie-stars > img{
+  width: 20px;
+  height: 20px;
+}
+.movie-info > p{
+  text-align: justify;
+}
+.movie-poster{
+  border-radius: 10px;
+  height: 400px;
+}
+
+@media (max-width:650px) {
+  .movie-container{
+    flex-direction: column-reverse;
+  }
+}

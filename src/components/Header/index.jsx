@@ -11,11 +11,11 @@ export function Header() {
 
   return (
     <header className='header'>
-      <h3>Movies</h3>
+      <NavLink to='/'>MoviesLaguilavo</NavLink>
       <section className='links-container'>
-        <NavLink to='/' style={({ isActive }) => stylesLinks(isActive)}>Home</NavLink>
-        <NavLink to='/movies' style={({ isActive }) => stylesLinks(isActive)}>Movies</NavLink>
-        <NavLink to='/series' style={({ isActive }) => stylesLinks(isActive)}>Series</NavLink>
+        {/* <NavLink to='/' style={({ isActive }) => stylesLinks(isActive)}>Home</NavLink> */}
+        {/* <NavLink to='/movies' style={({ isActive }) => stylesLinks(isActive)}>Movies</NavLink> */}
+        {/* <NavLink to='/series' style={({ isActive }) => stylesLinks(isActive)}>Series</NavLink> */}
         <div className='search-container'>
           <input type="text" placeholder='Search Movie'/>
         </div>
