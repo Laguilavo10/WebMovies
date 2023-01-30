@@ -1,23 +1,32 @@
-import React from 'react'
+import { useState } from 'react'
 import { NavLink } from 'react-router-dom' 
 import '../../styles/Header.css'
+import search from "../../assets/search.svg";
+
 
 export function Header() {
 
-  const stylesLinks = (isActive) => (isActive ? {
-    textDecoration: 'underline',
-    textUnderlineOffset:'5px'
-  }: null)
+  const [inputOpen, setInputOpen] = useState(false);
+  
+  const openInputSearch = ()=>{
+    setInputOpen(true)
+  }
+
+  const closeInputSearch = ()=>{
+    setInputOpen(false)
+  }
+
+  console.log(inputOpen);
+  
 
   return (
     <header className='header'>
       <NavLink to='/'>MoviesLaguilavo</NavLink>
       <section className='links-container'>
-        {/* <NavLink to='/' style={({ isActive }) => stylesLinks(isActive)}>Home</NavLink> */}
-        {/* <NavLink to='/movies' style={({ isActive }) => stylesLinks(isActive)}>Movies</NavLink> */}
-        {/* <NavLink to='/series' style={({ isActive }) => stylesLinks(isActive)}>Series</NavLink> */}
-        <div className='search-container'>
-          <input type="text" placeholder='Search Movie'/>
+        <div className={`search-container search-open--${inputOpen}`} >
+          <img src={search} alt="" onClick={openInputSearch}/>
+          <input type="text" placeholder='Search Movie' className={`input-open--${inputOpen}`}/>
+          <p onClick={closeInputSearch} className={`close-input--${inputOpen}`}>x</p>
         </div>
       </section>
     </header>

@@ -10,5 +10,15 @@
   gap: 20px;
   justify-content: center;
 }
+.genders-list > a{
+  padding: 4px 6px;
+  font-weight: 700;
+}
+.genders-list > a:hover{
+  background-color: antiquewhite;
+  border-radius: 4px;
+  color: black;
+  font-weight: 900;
+}
 
 /* .genders-list >  */

@@ -5,8 +5,11 @@ import { useRedirectMovie } from "../../hooks/useRedirectMovie"
 import { BASE_URL_IMG } from "../../utils/API"
 
 export function MoviePoster({ title, dataMovie }) {
+  if (!dataMovie.poster_path) {
+    return null //si no tiene poster mejor que no lo muestre
+  }
+
   let redirect = useRedirectMovie(title, dataMovie)
-  // let score = ((dataMovie.vote_average * 5) / 10).toFixed(1)
   let score = dataMovie.vote_average.toFixed(1)
   return (
     <div onClick={redirect} className="movie-poster" key={dataMovie.id}>

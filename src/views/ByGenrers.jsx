@@ -34,7 +34,7 @@ export function ByGenrers() {
 
   const paginaSiguiente = () => {
     setCurrentPage((prevState) =>
-      prevState === state.total_pages ? 1 : prevState + 1
+      prevState === state.total_pages ? state.total_pages : prevState + 1
     )
   }
 

@@ -22,22 +22,53 @@ a, a:visited{
   color: var(--text-grey-color);
 }
 
-.search-container > input{
-  margin-left: 30px;
-  padding: 8px;
+.search-container {
+  display: flex;
   border-radius: 20px;
   border: 3px solid var(--input-color);
-  background-color: transparent;
-  color: white;
-}
-.search-container > input:focus{
-  outline: none;
-}
-
-.search-container > input::placeholder{
-  color: var(--text-grey-color);
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  gap: 4px;
+  transition: .5s;
 }
 
 .search-container > img{
-  width: 40px;
+  /* margin: 0 4px; */
+  height: 100%;
+  cursor: pointer;
+}
+
+.search-container > input{
+  display: none;
+}
+
+.search-open--true{
+  width: 250px;
+  transition: 2s;
+}
+
+.input-open--true{
+  display: flex !important;
+  transition: 2s;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 180px;
+}
+
+.close-input--true{
+  display: table-cell;
+  position: absolute;
+  right: 10px;
+  vertical-align:text-top;
+  margin-bottom: 3px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.close-input--false{
+  display: none;
 }
