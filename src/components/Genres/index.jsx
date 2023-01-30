@@ -14,7 +14,7 @@ export function Genres() {
         <div className="genders-list">
           {!loading &&
             state.genres.map((genre) => (
-              <NavLink key={genre.id} to={`/genres/${genre.id}`}>{genre.name}</NavLink>
+              <NavLink key={genre.id} to={`/genres/${genre.id}?genre=${genre.name}`}>{genre.name}</NavLink>
             ))}
         </div>
       </section>

@@ -1,0 +1,12 @@
+.byGenrers > h1{
+  text-align: center;
+  margin: 20px;
+  font-size: 3rem;
+}
+
+.byGenders-list{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

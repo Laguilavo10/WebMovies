@@ -1,29 +1,33 @@
-import "../styles/ByGenrers.css"
-import "../styles/Genrers.css"
-import { useParams } from "react-router-dom"
+import '../styles/ByGenders.css'
+
+import { useLocation, useParams } from "react-router-dom"
 import { useFetch } from "../hooks/useFetch"
-import { API_ENDPOINTS, BASE_URL_IMG } from "../utils/API"
-// import { useRedirectMovie } from "../hooks/useRedirectMovie"
+
 import { MoviePoster } from "../components/MoviePoster"
-import Loading from "../components/Loading"
+import { Loading } from "../components/Loading"
 
 export function ByGenrers() {
-  let { movieID } = useParams()
-
+  let hola = useParams()
+  let { search } = useLocation()
+  let category = search.split('=')[1];
 
   let { state, loading } = useFetch({
     endpoint: "filterByGenres",
-    queryParameters: movieID,
+    queryParameters: hola.movieID,
   })
 
   //Envuelve el contenido en un componente Loading para que procese un cargando.. mientras llega la respuesta
   return (
     <>
       <Loading loading={loading}> 
-        <main className="byGenrers-container">
-          {state.results?.map((movie) => (
-            <MoviePoster title={movie.title} dataMovie={movie} key={movie.id} />
-          ))}
+        <main className="byGenrers">
+          <h1>{category}</h1>
+          <div className="byGenders-list">
+            {state.results?.map((movie) => (
+              <MoviePoster title={movie.title} dataMovie={movie} key={movie.id} />
+            ))}
+
+          </div>
         </main>
       </Loading>
     </>

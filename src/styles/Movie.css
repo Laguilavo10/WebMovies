@@ -26,9 +26,9 @@
 .movie-info > p{
   text-align: justify;
 }
-.movie-poster{
+
+.movie-poster--info{
   border-radius: 10px;
-  height: 400px;
 }
 
 @media (max-width:650px) {

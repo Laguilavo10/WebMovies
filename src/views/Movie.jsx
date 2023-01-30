@@ -24,7 +24,7 @@ export function Movie() {
             <p>{state.overview}</p>
           </div>
           <img
-            className="movie-poster"
+            className="movie-poster--info"
             src={`https://image.tmdb.org/t/p/w300${state.poster_path}`}
             alt=""
           />
