@@ -26,6 +26,7 @@ export function ByGenrers() {
   }, [currentPage])
 
   let { search } = useLocation()
+
   let category = search.split("=")[1]
 
   const paginaAnterior = () => {
@@ -38,6 +39,7 @@ export function ByGenrers() {
     )
   }
 
+  
   return (
     <>
       <Loading loading={loading}>
@@ -54,9 +56,7 @@ export function ByGenrers() {
           </div>
           <section className="byGenrers-changePage--container">
             <img src={arrow} alt="left-arrow" className="arrow left-arrow" onClick={paginaAnterior}/>
-            <p>
-              Estas en la pagina {state.page} de  {state.total_pages}
-            </p>
+            <p>Estas en la pagina {state.page} de  {state.total_pages}</p>
             <img src={arrow} alt="right-arrow" className="arrow right-arrow" onClick={paginaSiguiente}/>
           </section>
         </main>

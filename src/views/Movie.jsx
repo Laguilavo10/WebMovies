@@ -5,9 +5,12 @@ import { useFetch } from "../hooks/useFetch"
 import "../styles/Movie.css"
 
 export function Movie() {
-  // let { state } = useLocation()
+  let { state } = useLocation()
 
-  let { state, loading } = useFetch()
+  // let { state, loading } = useFetch()
+  console.log(state);
+  
+
 
   return (
     <>
