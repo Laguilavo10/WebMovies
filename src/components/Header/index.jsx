@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom"
 import search from "../../assets/search.svg"
+import film from "/movie.svg"
 import home from "../../assets/home.svg"
 import "../../styles/Header.css"
 
@@ -7,7 +8,10 @@ export function Header() {
 
   return (
     <header className="header">
-      <NavLink to="/">MoviesLaguilavo</NavLink>
+      <NavLink to="/" className='header-icon'>
+        <img src={film} alt="" />
+        <p>CinemaInfo</p>
+      </NavLink>
       <section className="links-container">
         <NavLink to="/" className='link-item--container'>
           <img src={home} alt="search" />
