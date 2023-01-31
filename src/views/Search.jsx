@@ -37,7 +37,7 @@ export function Search() {
             <input
               type="text"
               value={valueInput}
-              placeholder="Buscar"
+              placeholder="Search"
               onChange={handleSearch}
             />
             <button>

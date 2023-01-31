@@ -16,7 +16,6 @@ export function Header() {
         <NavLink to={"/search"} className="link-item--container">
           <img src={search} alt="search" />
           <p className="link-item--info">Busqueda</p>
-          {/* Busqueda */}
         </NavLink>
       </section>
     </header>

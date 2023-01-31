@@ -25,7 +25,6 @@ export function Trends() {
             <h4>{movies[movieOrder]?.title}</h4>
             <p>{movies[movieOrder]?.overview}</p>
           </div>
-          {/* <img src='https://cdn.wallpapersafari.com/40/52/lHEsPO.jpg' alt="" /> */}
           <img src={`${BASE_URL_IMG}${WIDTH_URL_IMG['original']}${movies[movieOrder]?.backdrop_path}`} alt="" />
         </div>
       </section>

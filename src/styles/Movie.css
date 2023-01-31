@@ -59,4 +59,13 @@
   .movie-container{
     flex-direction: column-reverse;
   }
+  .movie-info > h2{
+    text-align: center;
+  }
+  
+  .movie-genres--has > a{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
