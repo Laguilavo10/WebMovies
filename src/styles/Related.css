@@ -1,13 +1,17 @@
-.related-movies--container{
+.related-movies--container {
   display: flex;
   flex-direction: column;
   gap: 12px;
   height: auto;
   margin: 0 5%;
-  
 }
 
-.related-movies--container > div{
+.related-movies--container > h3 {
+  font-size: 1.5rem;
+}
+
+
+.related-movies--container > div {
   display: flex;
   gap: 20px;
   overflow: auto;
