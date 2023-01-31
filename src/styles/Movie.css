@@ -2,14 +2,15 @@
   display: flex;
   margin: 45px 10%;
   gap: 30px;
-  /* justify-content: center; */
   align-items: center;
 }
+
 .movie-info{
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .movie-info > h2{
   font-size: 3rem;
 }
@@ -30,8 +31,6 @@
 .movie-poster--info{
   border-radius: 10px;
 }
-
-
 
 @media (max-width:650px) {
   .movie-container{

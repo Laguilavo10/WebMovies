@@ -8,7 +8,6 @@
 .recent-poster--container{
   display: flex;
   gap: 20px;
-  /* flex-wrap: wrap; */
   overflow: auto;
   justify-content: space-between;
 }
