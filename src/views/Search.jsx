@@ -25,6 +25,7 @@ export function Search() {
     setvalueInput(e.target.value)
   }
   const deleteSearch = (e) => {
+    e.preventDefault()
     setvalueInput("")
   }
   return (

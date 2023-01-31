@@ -1,7 +1,8 @@
 const API_KEY = `?api_key=${import.meta.env.VITE_API_KEY}`
 const BASE_URL = 'https://api.themoviedb.org/3'
 const LANGUAJE = 'es-CO'
-export const BASE_URL_IMG = 'https://image.tmdb.org/t/p/w300'
+// export const BASE_URL_IMG = 'https://image.tmdb.org/t/p/w300'
+export const BASE_URL_IMG = 'https://image.tmdb.org/t/p/original'
 
 
 

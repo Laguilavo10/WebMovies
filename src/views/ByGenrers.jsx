@@ -27,7 +27,8 @@ export function ByGenrers() {
 
   let { search } = useLocation()
 
-  let category = search.split("=")[1]
+  let category = decodeURIComponent(search.split("=")[1]) //elimina el '%20' deltexto
+
 
   const paginaAnterior = () => {
     setCurrentPage((prevState) => (prevState === 1 ? 1 : prevState - 1))

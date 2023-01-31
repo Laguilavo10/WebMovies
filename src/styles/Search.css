@@ -2,6 +2,9 @@
   text-align: center;
   font-size: 3rem;
 }
+.movie-search > h4{ 
+  margin: 0 5%;
+}
 .movie-search--form{
   display: flex;
   justify-content: center;
