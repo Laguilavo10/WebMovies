@@ -25,8 +25,6 @@ export function Movie() {
       urlInfo.state?.genre_ids.includes(a.id)
     ))
 
-
-
   return (
     <>
       <Loading loading={loading}>
