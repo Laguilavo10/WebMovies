@@ -19,6 +19,10 @@ body{
   margin-bottom: 40px;
 }
 
+input, button{
+  color: black;
+}
+
 .home{
   margin: 0 5%;
   display: flex;
@@ -28,4 +32,8 @@ body{
 
 .byGenrers{
   margin: 0 5%;
+}
+
+.invisible{
+  display: none;
 }

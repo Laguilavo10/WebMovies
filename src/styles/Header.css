@@ -4,7 +4,12 @@
   color: white;
   justify-content: space-between;
   align-items: center;
-  margin: 0 30px;
+  padding: 0 30px;
+  position: sticky;
+  z-index: 50;
+  width: 100%;
+  background-color: var(--background-color);
+  top: 0;
 }
 
 a, a:visited{
@@ -22,30 +27,44 @@ a, a:visited{
   color: var(--text-grey-color);
 }
 
-/* height: 20px; */
-.link-search{
-  background-color: transparent;
-  display: flex;
-  border: none;
-  /* align-items: center; */
-  gap: 8px;
-  margin: 5px;
-}
-
-.link-search > p{
+.link-item > p{
   font-size: 1rem;
 }
 
-.link-search:hover{
-  /* out-bottom: ; */
-  border-bottom: 1px solid white;
-  border-radius: 2px;
+.link-item--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link-item--container > img{
+  width: 20px;
+  height: 20px;
+}
+.link-item--info{
+  position: relative;
+  margin: 0 8px ;
+  padding: 5px 0;
 
 }
 
-/* .link-search:hover{
-  text-decoration: ;
-} */
+.link-item--info:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--text-grey-color);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.link-item--info:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
 
 /* CODIGO PARA CREAR UN INPUT ANIMADO CON TRASICIONES - NO ESTA EN USO */
 

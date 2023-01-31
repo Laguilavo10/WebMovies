@@ -1,7 +1,55 @@
-input{
-  color: black;
+.movie-search > h1{
+  text-align: center;
+  font-size: 3rem;
+}
+.movie-search--form{
+  display: flex;
+  justify-content: center;
+  /* gap: 30px; */
+  background-color: #3B3D47;
+  width: 70%;
+  min-width: 270px;
+  justify-self: center;
+  margin: auto;
+  padding: 0 8px;
+  border-radius: 10px;
+  margin: 20px auto;
 }
 
-button{
-  color: black;
+.movie-search--form > input{
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.movie-search--form > input::placeholder{
+  color: #7B7B7E;
+}
+
+.movie-search--form > button{
+  font-size: 2rem;
+  font-weight: bold;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.movie-search--form > button > img{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin: auto;
+}
+
+
+.movie-search--form > button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
