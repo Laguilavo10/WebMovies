@@ -2,7 +2,7 @@ import "../../styles/MoviePoster.css"
 import star from "../../assets/star.svg"
 
 import { useRedirectMovie } from "../../hooks/useRedirectMovie"
-import { BASE_URL_IMG } from "../../utils/API"
+import { BASE_URL_IMG, WIDTH_URL_IMG } from "../../utils/API"
 
 export function MoviePoster({ title, dataMovie }) {
   if (!dataMovie.poster_path) {
@@ -12,7 +12,7 @@ export function MoviePoster({ title, dataMovie }) {
   let score = dataMovie.vote_average.toFixed(1)
   return (
     <div onClick={redirect} className="movie-poster" key={dataMovie.id}>
-      <img src={`${BASE_URL_IMG}${dataMovie.poster_path}`} alt={dataMovie.id} />
+      <img src={`${BASE_URL_IMG}${WIDTH_URL_IMG['w300']}${dataMovie.poster_path}`} alt={dataMovie.id} />
       <div className="shadow-poster">
         <div>
           <svg

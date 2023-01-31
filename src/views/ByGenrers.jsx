@@ -11,7 +11,7 @@ export function ByGenrers() {
 
   const [currentPage, setCurrentPage] = useState(1)
 
-  let queryParameters = `&page=${currentPage}&language=en-US&region=CO&with_genres=${slug.movieID}`
+  let queryParameters = `&page=${currentPage}&language=es-CO&region=CO&with_genres=${slug.movieID}`
   const [parameters, setParameters] = useState(queryParameters)
 
   let { state, loading } = useFetch({

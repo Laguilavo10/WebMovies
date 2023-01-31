@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom"
 import star from "../assets/star.svg"
 import { useFetch } from "../hooks/useFetch"
 import "../styles/Movie.css"
+import { BASE_URL_IMG, WIDTH_URL_IMG } from "../utils/API"
 
 export function Movie() {
   let { state } = useLocation()
@@ -31,7 +32,7 @@ export function Movie() {
           </div>
           <img
             className="movie-poster--info"
-            src={`https://image.tmdb.org/t/p/w300${state.poster_path}`}
+            src={`${BASE_URL_IMG}${WIDTH_URL_IMG['w500']}${state.poster_path}`}
             alt=""
           />
         </article>

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useFetch } from "../../hooks/useFetch";
 import { useRedirectMovie } from "../../hooks/useRedirectMovie";
 import '../../styles/Trends.css'
-import { BASE_URL_IMG } from "../../utils/API";
+import { BASE_URL_IMG, WIDTH_URL_IMG } from "../../utils/API";
 import { Loading } from "../Loading";
 
 export function Trends() {
@@ -26,7 +26,7 @@ export function Trends() {
             <p>{movies[movieOrder]?.overview}</p>
           </div>
           {/* <img src='https://cdn.wallpapersafari.com/40/52/lHEsPO.jpg' alt="" /> */}
-          <img src={`${BASE_URL_IMG}${movies[movieOrder]?.backdrop_path}`} alt="" />
+          <img src={`${BASE_URL_IMG}${WIDTH_URL_IMG['original']}${movies[movieOrder]?.backdrop_path}`} alt="" />
         </div>
       </section>
     </Loading>
