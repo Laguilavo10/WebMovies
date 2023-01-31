@@ -17,6 +17,11 @@ export const API_ENDPOINTS = {
   searched: `${BASE_URL}/search/movie${API_KEY}&page=1&region=CO&language=${LANGUAJE}`,
 }
 
+
+//https://api.themoviedb.org/3/genre/movie/list?api_key=28b214b65e7b229f965d281328f405d2&language=es-CO
+
+
+
 // https://api.themoviedb.org/3/search/movie?api_key=28b214b65e7b229f965d281328f405d2&query=botas&page=1
 
 

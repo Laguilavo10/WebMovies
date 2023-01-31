@@ -33,6 +33,28 @@
   width: 300px;
 }
 
+.movie-genres--has{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.movie-genres--has > a{
+  display: flex;
+  gap: 5px;
+  list-style: none;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.colors-id{
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+
 @media (max-width:650px) {
   .movie-container{
     flex-direction: column-reverse;

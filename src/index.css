@@ -12,6 +12,24 @@
   --background-color:#04001f;
   --input-color:#6c2cfc;
   --text-grey-color:#9aa2ad
+
+
+  /* colores generos */
+
+  --purple-light-1: #FBFAFB;
+  --purple-light-2: #EEEAF2;
+  --purple-medium-1: #AA83C8;
+  --purple-medium-2: #8B48BF;
+  --purple-medium-3: #5C218A;
+  --purple-dark-1: #3E0F64;
+  --purple-dark-2: #2A0646;
+
+  --yellow: #EECC75;
+  --green: #CAD297;
+  --aqua: #B7EAC5;
+  --lightBlue: #A2EEE5;
+  --darkBlue: #8EA2EA;
+  --red: #F09D9D;
 }
 
 body{
@@ -37,3 +55,23 @@ input, button{
 .invisible{
   display: none;
 }
+
+#id28 { background-color: var(--yellow); }
+#id12 { background-color: var(--red); }
+#id16 { background-color: var(--green); }
+#id35 { background-color: var(--lightBlue); }
+#id80 { background-color: var(--darkBlue); }
+#id99 { background-color: var(--purple-dark-1); }
+#id18 { background-color: var(--purple-medium-1); }
+#id10751 { background-color: var(--yellow); }
+#id14 { background-color: var(--red); }
+#id36 { background-color: var(--green); }
+#id27 { background-color: var(--lightBlue); }
+#id10402 { background-color: var(--darkBlue); }
+#id9648 { background-color: var(--purple-dark-1); }
+#id10749 { background-color: var(--purple-medium-1); }
+#id878 { background-color: var(--yellow); }
+#id10770 { background-color: var(--red); }
+#id53 { background-color: var(--green); }
+#id10752 { background-color: var(--lightBlue); }
+#id37 { background-color: var(--darkBlue); }
