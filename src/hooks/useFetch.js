@@ -7,6 +7,7 @@ export const useFetch = ({endpoint, queryParameters = ''})=>{
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    if (!endpoint) return; // si la url es null, no hace el fetch
     fetch(`${API_ENDPOINTS[endpoint]}${queryParameters}`)
       .then((res) => res.json())
       .then((data) => {
