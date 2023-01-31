@@ -7,7 +7,7 @@ import { Loading } from "../components/Loading"
 import { BASE_URL_IMG, WIDTH_URL_IMG } from "../utils/API"
 import { removeAccents } from "../utils/removeAccents"
 import { Related } from "../components/Related"
-
+import arrow from '../assets/arrow.svg'
 export function Movie() {
 
   useEffect(() => {
@@ -36,9 +36,11 @@ export function Movie() {
     <>
       <Loading loading={loading}>
         <main>
-          <div>
-            <button onClick={returnLastPage}>{'<'}</button>
-          </div>
+          
+          <button onClick={returnLastPage} className='btn-lastPage'>
+            <img src={arrow} alt="" />
+          </button>
+          <div className="shadow-back"></div>
           <article className="movie-container">
             <div className="movie-info">
               <h2>{urlInfo.state?.title}</h2>

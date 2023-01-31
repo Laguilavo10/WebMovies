@@ -1,52 +1,67 @@
-.movie-container{
+.movie-container {
   display: flex;
   margin: 45px 10%;
   gap: 30px;
   align-items: center;
 }
 
-.movie-info{
+.btn-lastPage {
+  padding: 20px;
+  position: absolute;
+  transform: rotate(180deg);
+  background-color: transparent;
+  border: none;
+  top: 60px;
+  left: 10px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.btn-lastPage > img {
+  width: 40px;
+}
+
+.movie-info {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.movie-info > h2{
+.movie-info > h2 {
   font-size: 3rem;
 }
 
-.movie-stars{
+.movie-stars {
   display: flex;
   flex-direction: row;
   gap: 8px;
 }
-.movie-stars > img{
+.movie-stars > img {
   width: 20px;
   height: 20px;
 }
-.movie-info > p{
+.movie-info > p {
   text-align: justify;
 }
 
-.movie-poster--info{
+.movie-poster--info {
   border-radius: 10px;
   width: 300px;
 }
 
-.movie-genres--has{
+.movie-genres--has {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.movie-genres--has > div{
+.movie-genres--has > div {
   display: flex;
   gap: 20px;
   align-items: center;
   flex-wrap: wrap;
-
 }
-.movie-genres--has > div > a{
+.movie-genres--has > div > a {
   display: flex;
   gap: 5px;
   list-style: none;
@@ -54,35 +69,33 @@
   border-radius: 10px;
 }
 
-.colors-id{
+.colors-id {
   margin: 0;
   width: 20px;
   height: 20px;
   border-radius: 5px;
 }
 
-@media (max-width:650px) {
-  .movie-container{
+@media (max-width: 650px) {
+  .movie-container {
     flex-direction: column-reverse;
   }
-  .movie-info > h2{
+  .movie-info > h2 {
     text-align: center;
   }
-  
-  .movie-genres--has > a{
+
+  .movie-genres--has > a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-
 }
 
-@media (max-width:450px) {
-
-  .movie-container{
-    margin: 400px 0 0 0 ;
+@media (max-width: 450px) {
+  .movie-container {
+    margin: 400px 0 0 0;
   }
-  .movie-poster--info{
+  .movie-poster--info {
     top: 0;
     padding-top: 60px;
     position: absolute;
@@ -91,8 +104,8 @@
     object-fit: cover;
     border-radius: 20px;
   }
-  
-  .movie-info{
+
+  .movie-info {
     border-radius: 20px;
     padding: 30px;
     z-index: 20;
@@ -100,8 +113,17 @@
     width: 100%;
   }
 
-  .movie-info > h2{
+  .movie-info > h2 {
     font-size: 1.5rem;
   }
-  
+
+  .shadow-back {
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 60px;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,0) 32%, rgba(0,0,0,0.6587009803921569) 87%);
+    z-index: 10;
+  }
 }
