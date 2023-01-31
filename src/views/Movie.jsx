@@ -1,14 +1,19 @@
+import star from "../assets/star.svg"
+import "../styles/Movie.css"
 import { useEffect } from "react"
 import { NavLink, useLocation, useNavigate } from "react-router-dom"
-import star from "../assets/star.svg"
 import { useFetch } from "../hooks/useFetch"
 import { Loading } from "../components/Loading"
-import "../styles/Movie.css"
 import { BASE_URL_IMG, WIDTH_URL_IMG } from "../utils/API"
 import { removeAccents } from "../utils/removeAccents"
+import { Related } from "../components/Related"
 
 export function Movie() {
 
+  useEffect(() => {
+    window.scrollTo(0, 0) //se pone en el top de la pagina
+  }) 
+  
   let urlInfo = useLocation()
   let navigate = useNavigate()
   let { state, loading } = useFetch({ endpoint: "genres" })
@@ -18,7 +23,6 @@ export function Movie() {
   useEffect(() => {
     if (!urlInfo.state) return navigate('/')
   }, []);
-  
 
   !loading &&
     (genresMovieHas = state.genres?.filter((a) =>
@@ -32,18 +36,15 @@ export function Movie() {
           <article className="movie-container">
             <div className="movie-info">
               <h2>{urlInfo.state?.title}</h2>
-              <p>{urlInfo.state?.vote_average}</p>
               <div className="movie-stars">
                 <img src={star} alt="" />
-                <img src={star} alt="" />
-                <img src={star} alt="" />
-                <img src={star} alt="" />
-                <img src={star} alt="" />
+                <p>{urlInfo.state?.vote_average.toFixed(1)}</p>  
               </div>
               <p>{urlInfo.state?.overview}</p>
               <ul className="movie-genres--has">
                 <p>Generos :</p>
-                {genresMovieHas.map((genre) => (
+                <div>
+                  {genresMovieHas.map((genre) => (
                   <NavLink
                     key={genre.id}
                     to={`/genres/${genre.id}?genre=${removeAccents(
@@ -55,6 +56,8 @@ export function Movie() {
                     <p>{genre.name}</p>
                   </NavLink>
                 ))}
+
+                </div>
               </ul>
             </div>
             <img
@@ -63,6 +66,7 @@ export function Movie() {
               alt={urlInfo.state?.title}
             />
           </article>
+          <Related movieID={urlInfo.state?.id}/>
         </main>
       </Loading>
     </>

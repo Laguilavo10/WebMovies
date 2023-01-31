@@ -35,12 +35,18 @@
 
 .movie-genres--has{
   display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.movie-genres--has > div{
+  display: flex;
   gap: 20px;
   align-items: center;
   flex-wrap: wrap;
-}
 
-.movie-genres--has > a{
+}
+.movie-genres--has > div > a{
   display: flex;
   gap: 5px;
   list-style: none;
@@ -72,11 +78,11 @@
 }
 
 @media (max-width:450px) {
+
   .movie-container{
     margin: 400px 0 0 0 ;
   }
   .movie-poster--info{
-    /* display: none; */
     top: 0;
     padding-top: 60px;
     position: absolute;
@@ -87,12 +93,15 @@
   }
   
   .movie-info{
-
     border-radius: 20px;
     padding: 30px;
     z-index: 20;
     background-color: var(--background-color);
     width: 100%;
+  }
+
+  .movie-info > h2{
+    font-size: 1.5rem;
   }
   
 }
