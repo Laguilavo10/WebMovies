@@ -29,10 +29,16 @@ export function Movie() {
       urlInfo.state?.genre_ids.includes(a.id)
     ))
 
+    const returnLastPage = ()=>{
+      navigate(-1)
+    }
   return (
     <>
       <Loading loading={loading}>
         <main>
+          <div>
+            <button onClick={returnLastPage}>{'<'}</button>
+          </div>
           <article className="movie-container">
             <div className="movie-info">
               <h2>{urlInfo.state?.title}</h2>

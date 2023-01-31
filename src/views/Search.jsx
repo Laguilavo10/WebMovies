@@ -7,10 +7,17 @@ import { useFetch } from "../hooks/useFetch"
 import ex from "../assets/delete.svg"
 
 export function Search() {
-  const [valueInput, setvalueInput] = useState("")
+  
+  let userLocalStorage = JSON.parse(localStorage.getItem("valueInput"));
+  
+  if (userLocalStorage == null) {
+    localStorage.setItem('valueInput', JSON.stringify(valueInput))
+  }
+
+  const [valueInput, setvalueInput] = useState(JSON.parse(localStorage.getItem("valueInput")))
   let endpoint
   let parameters = ""
-
+  
   //si el input esta en blanco muestra las que estan en trending
   if (valueInput != "") {
     endpoint = "searched"
@@ -23,10 +30,12 @@ export function Search() {
 
   const handleSearch = (e) => {
     setvalueInput(e.target.value)
+    localStorage.setItem('valueInput', JSON.stringify((e.target.value)))
   }
   const deleteSearch = (e) => {
     e.preventDefault()
     setvalueInput("")
+    localStorage.setItem('valueInput', JSON.stringify(''))
   }
   return (
     <>
