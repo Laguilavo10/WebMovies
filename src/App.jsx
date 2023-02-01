@@ -1,10 +1,10 @@
 import React from 'react'
 import {HashRouter, Routes, Route} from 'react-router-dom'
 import { Header } from './components/Header'
-import { ByGenrers } from './views/ByGenrers'
-import { Home } from './views/Home'
-import { Movie } from './views/Movie'
-import { Search } from './views/Search'
+import { ByGenrers } from './pages/ByGenrers'
+import { Home } from './pages/Home'
+import { Movie } from './pages/Movie'
+import { Search } from './pages/Search'
 
 
 export default function App() {
