@@ -8,6 +8,8 @@ import { BASE_URL_IMG, WIDTH_URL_IMG } from "../utils/API"
 import { removeAccents } from "../utils/removeAccents"
 import { Related } from "../components/Related"
 import arrow from '../assets/arrow.svg'
+
+
 export function Movie() {
 
   useEffect(() => {

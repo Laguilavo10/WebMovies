@@ -7,14 +7,14 @@ import { useFetch } from "../hooks/useFetch"
 import ex from "../assets/delete.svg"
 
 export function Search() {
-  
+  // debugger
   let userLocalStorage = JSON.parse(localStorage.getItem("valueInput"));
   
+  const [valueInput, setvalueInput] = useState('')
   if (userLocalStorage == null) {
-    localStorage.setItem('valueInput', JSON.stringify(valueInput))
+    localStorage.setItem('valueInput', JSON.stringify(''))
   }
 
-  const [valueInput, setvalueInput] = useState(JSON.parse(localStorage.getItem("valueInput")))
   let endpoint
   let parameters = ""
   
